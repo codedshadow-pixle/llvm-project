@@ -5,15 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#151515">
-  <meta name="description"
-    content="Jayesh Godara — BCA student, aspiring developer and creator from Jaipur, Rajasthan.">
+  <meta name="description" content="Jayesh Godara — BCA student, aspiring developer and creator from Jaipur, Rajasthan.">
   <title>Jayesh Godara | Portfolio</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5NGY4L3JT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J5NGY4L3JT');
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <style>
@@ -68,9 +74,7 @@
       text-decoration: none;
     }
 
-    button,
-    input,
-    textarea {
+    button, input, textarea {
       font: inherit;
     }
 
@@ -88,10 +92,6 @@
       font-size: 11px;
       letter-spacing: 1.4px;
       text-transform: uppercase;
-    }
-
-    .muted {
-      color: var(--muted);
     }
 
     .container {
@@ -175,7 +175,7 @@
       color: var(--bg);
     }
 
-    /* INTRO / CLICK TO ENTER */
+    /* INTRO */
 
     .intro {
       position: fixed;
@@ -223,8 +223,8 @@
       inset: 0;
       opacity: .16;
       background-image:
-        linear-gradient(rgba(255, 255, 255, .07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, .07) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px);
       background-size: 50px 50px;
       mask-image: linear-gradient(to bottom, black, transparent 95%);
       pointer-events: none;
@@ -252,7 +252,7 @@
       height: 8px;
       border-radius: 50%;
       background: var(--lime);
-      box-shadow: 0 0 16px rgba(217, 250, 115, .6);
+      box-shadow: 0 0 16px rgba(217,250,115,.6);
     }
 
     .intro h1 {
@@ -309,7 +309,6 @@
         opacity: 0;
         transform: translateY(22px);
       }
-
       to {
         opacity: 1;
         transform: translateY(0);
@@ -470,32 +469,34 @@
       box-shadow: var(--shadow);
     }
 
-    .art-card::before {
+    .art-card::before,
+    .art-card::after {
       content: "";
       position: absolute;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 50%;
+    }
+
+    .art-card::before {
       width: 250px;
       height: 250px;
       right: -50px;
       top: -55px;
-      border: 1px solid rgba(255, 255, 255, .35);
-      border-radius: 50%;
     }
 
     .art-card::after {
-      content: "";
-      position: absolute;
       width: 190px;
       height: 190px;
       right: -20px;
       top: -20px;
-      border: 1px solid rgba(255, 255, 255, .3);
-      border-radius: 50%;
     }
 
     .art-grid {
       position: absolute;
       inset: 0;
-      background-image: linear-gradient(rgba(255, 255, 255, .14) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .14) 1px, transparent 1px);
+      background-image:
+        linear-gradient(rgba(255,255,255,.14) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.14) 1px, transparent 1px);
       background-size: 30px 30px;
       opacity: .45;
     }
@@ -516,7 +517,7 @@
       font-size: clamp(120px, 17vw, 210px);
       font-weight: 800;
       letter-spacing: -.12em;
-      text-shadow: 10px 12px 0 rgba(0, 0, 0, .1);
+      text-shadow: 10px 12px 0 rgba(0,0,0,.1);
     }
 
     .art-bottom {
@@ -554,7 +555,7 @@
       padding: 22px 15px 22px 0;
     }
 
-    .stat+.stat {
+    .stat + .stat {
       border-left: 1px solid var(--line);
       padding-left: 25px;
     }
@@ -570,7 +571,7 @@
       font-size: 11px;
     }
 
-    /* WEBSITES / PROJECTS */
+    /* PROJECTS */
 
     .work-grid {
       display: grid;
@@ -855,7 +856,7 @@
       margin-bottom: 20px;
     }
 
-    .contact-copy>p {
+    .contact-copy > p {
       color: var(--muted);
       font-size: 14px;
       margin-bottom: 28px;
@@ -993,12 +994,12 @@
         letter-spacing: -3px;
       }
 
-      .hero-art {
-        min-height: 320px;
-      }
-
       .about-grid {
         gap: 35px;
+      }
+
+      .contact-box {
+        gap: 30px;
       }
 
       .skills-grid {
@@ -1008,45 +1009,31 @@
       .repo-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-
-      .contact-box {
-        gap: 30px;
-      }
     }
 
     @media (max-width: 650px) {
-      .container {
-        width: min(100% - 30px, 1120px);
-      }
-
       .section {
         padding: 70px 0;
       }
 
-      .section-head {
-        align-items: start;
-        flex-direction: column;
-        margin-bottom: 25px;
+      .container {
+        width: min(100% - 30px, 1120px);
       }
 
       .nav-inner {
-        min-height: 67px;
-      }
-
-      .menu-toggle {
-        display: grid;
+        min-height: 66px;
       }
 
       .nav-links {
         position: absolute;
-        top: 67px;
+        top: 66px;
         left: 0;
         right: 0;
         display: none;
         flex-direction: column;
         align-items: stretch;
         gap: 0;
-        padding: 10px 20px 20px;
+        padding: 10px 15px 15px;
         background: var(--bg);
         border-bottom: 1px solid var(--line);
       }
@@ -1060,8 +1047,12 @@
         border-bottom: 1px solid var(--line);
       }
 
+      .menu-toggle {
+        display: grid;
+      }
+
       .hero {
-        padding: 60px 0 50px;
+        padding-top: 60px;
       }
 
       .hero-grid {
@@ -1069,16 +1060,16 @@
       }
 
       .hero h1 {
-        font-size: clamp(47px, 13vw, 72px);
+        letter-spacing: -3px;
       }
 
       .hero-art {
-        min-height: auto;
-        padding: 15px 12px 28px 0;
+        min-height: 330px;
+        margin-top: 15px;
       }
 
       .art-card {
-        width: min(100%, 330px);
+        width: min(78%, 320px);
       }
 
       .floating-note {
@@ -1086,18 +1077,28 @@
       }
 
       .stats {
-        margin-top: 38px;
+        margin-top: 40px;
+      }
+
+      .stat {
+        padding: 18px 8px 18px 0;
+      }
+
+      .stat + .stat {
+        padding-left: 12px;
       }
 
       .stat strong {
         font-size: 21px;
       }
 
-      .stat+.stat {
-        padding-left: 13px;
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column;
       }
 
       .work-grid,
+      .repo-grid,
       .about-grid,
       .contact-box {
         grid-template-columns: 1fr;
@@ -1107,43 +1108,25 @@
         position: static;
       }
 
-      .repo-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .repo-card p {
-        min-height: 0;
-      }
-
       .timeline-item {
         grid-template-columns: 1fr;
-        gap: 7px;
+        gap: 8px;
       }
 
       .contact-box {
         gap: 35px;
-        padding: 24px;
-      }
-
-      .intro-bottom {
-        font-size: 9px;
-        left: 15px;
-        right: 15px;
-        bottom: 15px;
-      }
-
-      .intro h1 {
-        letter-spacing: -.07em;
-      }
-
-      .intro-sub {
-        font-size: 12px;
       }
 
       .footer-inner {
-        align-items: flex-start;
         flex-direction: column;
-        gap: 8px;
+        align-items: flex-start;
+      }
+
+      .intro-bottom {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        font-size: 9px;
       }
     }
 
@@ -1153,6 +1136,7 @@
       *::after {
         scroll-behavior: auto !important;
         animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
         transition-duration: .01ms !important;
       }
     }
@@ -1161,7 +1145,7 @@
 
 <body class="locked">
 
-  <!-- CLICK TO ENTER INTRO -->
+  <!-- INTRO / CLICK TO ENTER -->
   <div class="intro" id="intro">
     <div class="intro-grid"></div>
 
@@ -1281,7 +1265,7 @@
       </div>
     </section>
 
-    <!-- WEBSITES -->
+    <!-- WEBSITES / PROJECTS -->
     <section class="section" id="work">
       <div class="container">
         <div class="section-head reveal">
@@ -1289,8 +1273,7 @@
             <p class="eyebrow mono">SELECTED WORK</p>
             <h2>Things I've<br>put on the <span class="accent">web.</span></h2>
           </div>
-          <p>A collection of my website experiments, personal pages and coding work. This space will grow as I build
-            more.</p>
+          <p>A collection of my website experiments, personal pages and coding work. This space will grow as I build more.</p>
         </div>
 
         <div class="work-grid">
@@ -1306,9 +1289,7 @@
             <div class="work-info">
               <h3>Main Portfolio</h3>
               <p>My personal space on the web — projects, interests and ways to connect.</p>
-              <a class="work-link" href="#home">
-                You're here <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <a class="work-link" href="#home">You're here <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </article>
 
@@ -1324,8 +1305,7 @@
             <div class="work-info">
               <h3>Student Portfolio</h3>
               <p>A separate page about my student profile and development journey.</p>
-              <a class="work-link" href="https://codedshadow-pixle.github.io/sample.html/" target="_blank"
-                rel="noopener noreferrer">
+              <a class="work-link" href="https://codedshadow-pixle.github.io/sample.html/" target="_blank" rel="noopener noreferrer">
                 Visit website <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
             </div>
@@ -1343,8 +1323,7 @@
             <div class="work-info">
               <h3>Personal Profile</h3>
               <p>A different personal page with its own visual style and experience.</p>
-              <a class="work-link" href="https://codedshadow-pixle.github.io/infonew/" target="_blank"
-                rel="noopener noreferrer">
+              <a class="work-link" href="https://codedshadow-pixle.github.io/infonew/" target="_blank" rel="noopener noreferrer">
                 Visit website <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
             </div>
@@ -1362,8 +1341,7 @@
             <div class="work-info">
               <h3>GitHub Profile</h3>
               <p>Explore my public repositories and follow my progress as I learn.</p>
-              <a class="work-link" href="https://github.com/codedshadow-pixle" target="_blank"
-                rel="noopener noreferrer">
+              <a class="work-link" href="https://github.com/codedshadow-pixle" target="_blank" rel="noopener noreferrer">
                 View GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
             </div>
@@ -1373,11 +1351,9 @@
         <div class="section-head reveal" style="margin-top:65px;margin-bottom:20px">
           <div>
             <p class="eyebrow mono">FROM GITHUB</p>
-            <h2 style="font-size:clamp(27px,4vw,38px);letter-spacing:-1.5px">Latest repositories<span
-                class="accent">.</span></h2>
+            <h2 style="font-size:clamp(27px,4vw,38px);letter-spacing:-1.5px">Latest repositories<span class="accent">.</span></h2>
           </div>
-          <a class="work-link" href="https://github.com/codedshadow-pixle?tab=repositories" target="_blank"
-            rel="noopener noreferrer">
+          <a class="work-link" href="https://github.com/codedshadow-pixle?tab=repositories" target="_blank" rel="noopener noreferrer">
             All repositories <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </div>
@@ -1389,6 +1365,7 @@
             <div class="repo-meta"><span><i class="fa-brands fa-github"></i> GitHub</span></div>
           </article>
         </div>
+
         <p class="repo-status" id="repoStatus" aria-live="polite">
           Loading public repositories from GitHub...
         </p>
@@ -1404,25 +1381,10 @@
         </div>
 
         <div class="about-copy reveal">
-          <p>
-            Hey, I'm Jayesh Godara, a first-year Bachelor of Computer Applications
-            (BCA) student based in Jaipur, Rajasthan.
-          </p>
-          <p>
-            I'm interested in understanding how technology works in the real world.
-            I enjoy exploring websites, learning programming concepts and experimenting
-            with designs that feel clean, useful and easy to use.
-          </p>
-          <p>
-            I'm currently developing my knowledge of DBMS and SQL while improving
-            my understanding of web development and GitHub. I want to gain practical
-            experience, learn from people in the field and gradually build projects
-            that solve real problems.
-          </p>
-          <p>
-            I don't believe I need to know everything before starting. I'd rather
-            keep learning, make things, improve them and get better with experience.
-          </p>
+          <p>Hey, I'm Jayesh Godara, a first-year Bachelor of Computer Applications (BCA) student based in Jaipur, Rajasthan.</p>
+          <p>I'm interested in understanding how technology works in the real world. I enjoy exploring websites, learning programming concepts and experimenting with designs that feel clean, useful and easy to use.</p>
+          <p>I'm currently developing my knowledge of DBMS and SQL while improving my understanding of web development and GitHub. I want to gain practical experience, learn from people in the field and gradually build projects that solve real problems.</p>
+          <p>I don't believe I need to know everything before starting. I'd rather keep learning, make things, improve them and get better with experience.</p>
 
           <div class="about-note">
             <strong><i class="fa-solid fa-lightbulb"></i> Current mindset</strong>
@@ -1440,51 +1402,18 @@
             <p class="eyebrow mono">WHAT I'M EXPLORING</p>
             <h2>My learning<br><span class="accent">toolkit.</span></h2>
           </div>
-          <p>These are the areas I'm learning and practising. I'm continuing to build my skills through coursework and
-            personal experiments.</p>
+          <p>These are the areas I'm learning and practising through coursework and personal experiments.</p>
         </div>
 
         <div class="skills-grid">
-          <article class="skill reveal">
-            <i class="fa-solid fa-database"></i>
-            <h3>DBMS</h3>
-            <p>Database concepts</p>
-          </article>
-          <article class="skill reveal">
-            <i class="fa-solid fa-table"></i>
-            <h3>SQL</h3>
-            <p>Queries and tables</p>
-          </article>
-          <article class="skill reveal">
-            <i class="fa-brands fa-html5"></i>
-            <h3>HTML</h3>
-            <p>Web page structure</p>
-          </article>
-          <article class="skill reveal">
-            <i class="fa-brands fa-css3-alt"></i>
-            <h3>CSS</h3>
-            <p>Styling and layouts</p>
-          </article>
-          <article class="skill reveal">
-            <i class="fa-brands fa-js"></i>
-            <h3>JavaScript</h3>
-            <p>Learning interactivity</p>
-          </article>
-          <article class="skill reveal">
-            <i class="fa-brands fa-python"></i>
-            <h3>Python</h3>
-            <p>Programming practice</p>
-          </article>
-          <article class="skill reveal">
-            <i class="fa-brands fa-github"></i>
-            <h3>GitHub</h3>
-            <p>Repositories and projects</p>
-          </article>
-          <article class="skill reveal">
-            <i class="fa-solid fa-pen-ruler"></i>
-            <h3>UI / UX</h3>
-            <p>Design exploration</p>
-          </article>
+          <article class="skill reveal"><i class="fa-solid fa-database"></i><h3>DBMS</h3><p>Database concepts</p></article>
+          <article class="skill reveal"><i class="fa-solid fa-table"></i><h3>SQL</h3><p>Queries and tables</p></article>
+          <article class="skill reveal"><i class="fa-brands fa-html5"></i><h3>HTML</h3><p>Web page structure</p></article>
+          <article class="skill reveal"><i class="fa-brands fa-css3-alt"></i><h3>CSS</h3><p>Styling and layouts</p></article>
+          <article class="skill reveal"><i class="fa-brands fa-js"></i><h3>JavaScript</h3><p>Learning interactivity</p></article>
+          <article class="skill reveal"><i class="fa-brands fa-python"></i><h3>Python</h3><p>Programming practice</p></article>
+          <article class="skill reveal"><i class="fa-brands fa-github"></i><h3>GitHub</h3><p>Repositories and projects</p></article>
+          <article class="skill reveal"><i class="fa-solid fa-pen-ruler"></i><h3>UI / UX</h3><p>Design exploration</p></article>
         </div>
       </div>
     </section>
@@ -1503,32 +1432,19 @@
         <div class="timeline">
           <article class="timeline-item reveal">
             <div class="timeline-date">CHAPTER 01</div>
-            <div>
-              <h3>Started my BCA journey</h3>
-              <p>Learning computer applications, programming fundamentals and core computer science subjects.</p>
-            </div>
+            <div><h3>Started my BCA journey</h3><p>Learning computer applications, programming fundamentals and core computer science subjects.</p></div>
           </article>
           <article class="timeline-item reveal">
             <div class="timeline-date">CHAPTER 02</div>
-            <div>
-              <h3>Exploring databases</h3>
-              <p>Practising DBMS concepts and SQL queries as part of my technical learning.</p>
-            </div>
+            <div><h3>Exploring databases</h3><p>Practising DBMS concepts and SQL queries as part of my technical learning.</p></div>
           </article>
           <article class="timeline-item reveal">
             <div class="timeline-date">CHAPTER 03</div>
-            <div>
-              <h3>Building on the web</h3>
-              <p>Experimenting with HTML, CSS and JavaScript to create and improve personal websites.</p>
-            </div>
+            <div><h3>Building on the web</h3><p>Experimenting with HTML, CSS and JavaScript to create and improve personal websites.</p></div>
           </article>
           <article class="timeline-item reveal">
             <div class="timeline-date">NEXT CHAPTER</div>
-            <div>
-              <h3>Practical experience</h3>
-              <p>Looking forward to learning how real teams work, contributing to projects and growing through
-                experience.</p>
-            </div>
+            <div><h3>Practical experience</h3><p>Looking forward to learning how real teams work, contributing to projects and growing through experience.</p></div>
           </article>
         </div>
       </div>
@@ -1541,18 +1457,13 @@
           <div class="contact-copy">
             <p class="eyebrow mono">GET IN TOUCH</p>
             <h2>Have something<br>in <span class="accent">mind?</span></h2>
-            <p>
-              Want to connect, talk about technology, share an opportunity
-              or simply say hello? Feel free to reach out.
-            </p>
+            <p>Want to connect, talk about technology, share an opportunity or simply say hello? Feel free to reach out.</p>
 
             <div class="socials">
-              <a class="social-link" href="https://www.instagram.com/not_ur_jayesh/" target="_blank"
-                rel="noopener noreferrer">
+              <a class="social-link" href="https://www.instagram.com/not_ur_jayesh/" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-instagram"></i> Instagram
               </a>
-              <a class="social-link" href="https://github.com/codedshadow-pixle" target="_blank"
-                rel="noopener noreferrer">
+              <a class="social-link" href="https://github.com/codedshadow-pixle" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-github"></i> GitHub
               </a>
             </div>
@@ -1610,7 +1521,6 @@
       document.body.classList.remove("locked");
     });
 
-    // Also allow Enter key to open the website
     document.addEventListener("keydown", (event) => {
       if (event.key === "Enter" && !intro.classList.contains("hidden")) {
         intro.classList.add("hidden");
